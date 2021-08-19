@@ -12,7 +12,7 @@ public class SearchByQuickSort {
         int[] nums = {1, 3, 2, 6, 4, 5};
         int start = 0, end = nums.length - 1;
         int k = 3;
-        int ans = searchByquickSort(nums, start, end, 3);
+        int ans = searchByquickSort(nums, start, end, k);
         System.out.println(ans);
     }
 
@@ -30,7 +30,7 @@ public class SearchByQuickSort {
                 }
                 nums[right] = nums[right];
             }
-            //需要理解standard的位置是固定的，它的下标为left的值，且standard的左边的数一定比它小，右边的数一定都比它大
+            //需要理解standard位置已经找到并且不会再变，它的下标为left的值，且standard的左边的数一定比它小，右边的数一定都比它大
             nums[left] = standard;
             if (left == k - 1) {
                 //standard为第k大的元素
