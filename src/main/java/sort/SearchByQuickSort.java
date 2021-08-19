@@ -28,7 +28,7 @@ public class SearchByQuickSort {
                 while (left < right && nums[left] <= standard) {
                     left++;
                 }
-                nums[right] = nums[right];
+                nums[right] = nums[left];
             }
             //需要理解standard位置已经找到并且不会再变，它的下标为left的值，且standard的左边的数一定比它小，右边的数一定都比它大
             nums[left] = standard;

@@ -33,7 +33,7 @@ public class QuickSort {
                 while (left < right && nums[left] <= standard) {
                     left++;
                 }
-                nums[right] = nums[right];
+                nums[right] = nums[left];
             }
             nums[left] = standard;
             quickSort(nums, start, left);
